@@ -22,6 +22,16 @@ export const Header = () => {
               💇 Basic styles
             </PageLink>
           </LinksItem>
+          <LinksItem>
+            <PageLink href={routes.flex} view="text">
+              🕺 Flex
+            </PageLink>
+          </LinksItem>
+          <LinksItem>
+            <PageLink href={routes.grid} view="text">
+              🍱 Grid
+            </PageLink>
+          </LinksItem>
         </LinksList>
       </Navigation>
     </Element>

@@ -17,7 +17,7 @@ export const Component = () => {
       </p>
       <p>
         <LinkButton view="text" href="https://flukeout.github.io/" blank noref>
-          👉 Lets practice
+          🕹️ Lets practice
         </LinkButton>
       </p>
     </Page>
