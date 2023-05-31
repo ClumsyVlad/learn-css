@@ -9,7 +9,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: routes.index,
-        lazy: () => import("@/pages/MainPage/MainPage"),
+        lazy: () => import("@/pages/MainPage"),
+      },
+      {
+        path: routes.selectors,
+        lazy: () => import("@/pages/Selectors"),
+      },
+      {
+        path: routes.basicStyles,
+        lazy: () => import("@/pages/BasicStyles"),
       },
     ],
   },

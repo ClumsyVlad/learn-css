@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 import { Colors, FontSizes, FontWeights } from "@/styles"
 
 interface TypographyProps {
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large" | "giant";
   weight?: "thin" | "regular" | "bold";
   flat?: boolean;
 }
@@ -47,6 +47,25 @@ export const Paragraph = styled.p<TypographyProps>`
 
 export const InlineText = styled.span<TypographyProps>`
   ${commonTextStyles}
+`
+
+export const Title = styled.h1<TypographyProps>`
+  margin: 0;
+  font-size: ${({ size }) => {
+    switch (size) {
+      case "small":
+        return FontSizes.small
+      case "medium":
+        return FontSizes.medium
+      case "large":
+        return FontSizes.large
+      case "giant":
+        return FontSizes.giant
+      default:
+        return FontSizes.large
+    }
+  }};
+  font-weight: ${FontWeights.bold};
 `
 
 export const ChartLabelStyles = css`

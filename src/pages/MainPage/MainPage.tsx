@@ -1,13 +1,35 @@
-import { Image } from "@/components/atoms"
+import styled from "styled-components"
+
+import { InlineText, Paragraph } from "@/components/atoms"
 import { Page } from "@/components/molecules"
+import { FontWeights } from "@/styles"
 
 export const Component = () => {
   return (
     <Page title="Main page">
-      <Image
-        src="https://css-tricks.com/wp-content/uploads/2021/04/css-is-awesome.jpg"
-        alt="Meme"
-      />
+      <Box>
+        <Paragraph>
+          <InlineText>CSS</InlineText>
+          <InlineText>is</InlineText>
+          <InlineText>avesome</InlineText>
+        </Paragraph>
+      </Box>
     </Page>
   )
 }
+
+const Box = styled.div`
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  border: 4px solid black;
+  font-size: 98px;
+  line-height: 0.93;
+  font-weight: ${FontWeights.bold};
+  letter-spacing: 0.003em;
+  background: white;
+
+  ${InlineText} {
+    display: block;
+  }
+`

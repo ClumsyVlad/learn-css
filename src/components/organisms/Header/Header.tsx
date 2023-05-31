@@ -8,13 +8,18 @@ export const Header = () => {
   return (
     <Element>
       <LogoLink href={routes.index}>
-        <LogoPlaceholder>Learn CSS</LogoPlaceholder>
+        <LogoPlaceholder>👨‍🎓 Learn CSS</LogoPlaceholder>
       </LogoLink>
       <Navigation>
         <LinksList>
           <LinksItem>
-            <PageLink href={routes.index} view="text">
-              🏡 Home
+            <PageLink href={routes.selectors} view="text">
+              👆 Selectors
+            </PageLink>
+          </LinksItem>
+          <LinksItem>
+            <PageLink href={routes.basicStyles} view="text">
+              💇 Basic styles
             </PageLink>
           </LinksItem>
         </LinksList>
@@ -48,22 +53,22 @@ const Navigation = styled.nav`
 
 const LogoPlaceholder = styled.span`
   margin: 0;
-  font-size: ${FontSizes.giant};
+  font-size: ${FontSizes.large};
   line-height: 1;
   font-weight: ${FontWeights.bold};
 `
 
 const LinksList = styled.ul`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: ${Spacings.medium};
   padding-left: ${Spacings.small};
 `
 
 const LinksItem = styled.li`
-  display: block;
-
-  & + & {
-    margin-top: ${Spacings.medium};
-  }
+  display: flex;
+  flex-direction: column;
+  gap: ${Spacings.extraSmall};
 `
 
 const PageLink = styled(LinkButton)`
