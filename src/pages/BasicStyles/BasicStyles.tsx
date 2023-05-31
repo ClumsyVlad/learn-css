@@ -42,7 +42,7 @@ const OurCSS = styled.div`
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 248px);
+  grid-template-columns: repeat(auto-fill, 200px);
   justify-items: center;
   border: 1px solid black;
   gap: ${Spacings.medium};
