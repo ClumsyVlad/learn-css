@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: routes.index,
-        lazy: () => import("@/pages/MainPage/DashboardPage"),
+        lazy: () => import("@/pages/MainPage/MainPage"),
       },
     ],
   },

@@ -39,9 +39,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    display: grid;
+    grid-template-columns: 248px 1fr;
     min-height: 100%;
     min-height: -webkit-fill-available;
   }

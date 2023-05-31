@@ -1,59 +1,49 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
-import { Container, LinkButton } from '@/components/atoms'
-import { routes } from '@/config'
-import { Colors, FontSizes, FontWeights, Spacings, splitSelectors } from '@/styles'
+import { LinkButton } from "@/components/atoms"
+import { routes } from "@/config"
+import { FontSizes, FontWeights, Spacings, splitSelectors } from "@/styles"
 
 export const Header = () => {
   return (
     <Element>
-      <HeaderContainer>
-        <Navigation>
-          <LogoLink href={routes.index}>
-            <LogoPlaceholder>Vaults.fyi</LogoPlaceholder>
-          </LogoLink>
-          <LinksList>
+      <LogoLink href={routes.index}>
+        <LogoPlaceholder>Learn CSS</LogoPlaceholder>
+      </LogoLink>
+      <Navigation>
+        <LinksList>
+          <LinksItem>
             <PageLink href={routes.index} view="text">
               🏡 Home
             </PageLink>
-          </LinksList>
-        </Navigation>
-      </HeaderContainer>
+          </LinksItem>
+        </LinksList>
+      </Navigation>
     </Element>
   )
 }
 
 const Element = styled.header`
-  display: flex;
-  align-items: center;
-  min-height: 64px;
+  height: 100%;
+  padding: 0 ${Spacings.medium};
+  background: white;
+  border-right: 1px solid black;
 `
 
-const HeaderContainer = styled(Container)`
-  display: flex;
-  align-items: center;
-  min-height: 100%;
+const LogoLink = styled(LinkButton).attrs({ view: "default" })`
+  margin-top: ${Spacings.medium};
+  text-decoration: none;
+  color: black;
+  ${splitSelectors(
+    ["hover", "focus-visible"],
+    css`
+      color: gray;
+    `
+  )}
 `
 
 const Navigation = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: ${Spacings.large};
-  width: 100%;
-  flex-wrap: wrap;
-  padding: ${Spacings.medium} 0;
-`
-
-const LogoLink = styled(LinkButton).attrs({ view: 'default' })`
-  text-decoration: none;
-  color: ${Colors.mainDark};
-  ${splitSelectors(
-    ['hover', 'focus-visible'],
-    css`
-      color: ${Colors.accent};
-    `
-  )}
+  margin-top: ${Spacings.medium};
 `
 
 const LogoPlaceholder = styled.span`
@@ -63,11 +53,17 @@ const LogoPlaceholder = styled.span`
   font-weight: ${FontWeights.bold};
 `
 
-const LinksList = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${Spacings.extraSmall} ${Spacings.medium};
-  flex-wrap: wrap;
+const LinksList = styled.ul`
+  display: block;
+  padding-left: ${Spacings.small};
+`
+
+const LinksItem = styled.li`
+  display: block;
+
+  & + & {
+    margin-top: ${Spacings.medium};
+  }
 `
 
 const PageLink = styled(LinkButton)`

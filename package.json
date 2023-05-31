@@ -13,6 +13,7 @@
     "lint:prettier": "prettier './{src,tests}/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.3",
     "@types/node": "^18.15.11",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
