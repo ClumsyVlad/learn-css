@@ -27,6 +27,10 @@ export const router = createBrowserRouter([
         path: routes.grid,
         lazy: () => import("@/pages/Grid/Grid"),
       },
+      {
+        path: routes.sandbox,
+        lazy: () => import("@/pages/Sandbox/Sandbox"),
+      },
     ],
   },
 ])

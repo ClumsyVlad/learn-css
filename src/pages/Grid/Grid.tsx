@@ -5,7 +5,7 @@ import { Page } from "@/components/molecules"
 
 export const Component = () => {
   return (
-    <Page title="Flex">
+    <Page title="Grid">
       <Title>Flex</Title>
       <p>
         <LinkButton view="text" href="https://gridbyexample.com/" blank noref>

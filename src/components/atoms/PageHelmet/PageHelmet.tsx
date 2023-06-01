@@ -7,7 +7,7 @@ interface PageHelmetProps {
 export const PageHelmet = ({ text }: PageHelmetProps) => {
   return (
     <Helmet>
-      <title>Vaults.fyi | {text}</title>
+      <title>Learn CSS | {text}</title>
     </Helmet>
   )
 }

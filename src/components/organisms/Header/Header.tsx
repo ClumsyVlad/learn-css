@@ -32,6 +32,11 @@ export const Header = () => {
               🍱 Grid
             </PageLink>
           </LinksItem>
+          <LinksItem>
+            <PageLink href={routes.sandbox} view="text">
+              🏜️ Sandbox
+            </PageLink>
+          </LinksItem>
         </LinksList>
       </Navigation>
     </Element>

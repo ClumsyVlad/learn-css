@@ -4,4 +4,5 @@ export const routes = {
   basicStyles: "/basic-styles",
   flex: "/flex",
   grid: "/grid",
+  sandbox: "/sandbox",
 } as const
