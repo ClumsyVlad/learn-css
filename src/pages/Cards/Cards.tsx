@@ -1,4 +1,4 @@
-import { InlineText, Title } from "@/components/atoms";
+import { InlineText, LinkButton, Title } from "@/components/atoms";
 import { Page } from "@/components/molecules";
 
 const pokeballImage =
@@ -68,7 +68,16 @@ export const Component = () => {
     <Page title="Cards">
       <Title>Cards</Title>
       <p>
-        <InlineText>Let's create some cards</InlineText>
+        <InlineText>Let's create some cards.</InlineText>
+      </p>
+      <p>
+        <LinkButton
+          href="https://www.figma.com/file/LO1cv0bfHI5t4Sq8XWNWCG/%F0%9F%AA%84-Learn-CSS?type=design&node-id=1-2"
+          blank
+          view="text"
+        >
+          👁️ Figma
+        </LinkButton>
       </p>
     </Page>
   );
