@@ -31,6 +31,10 @@ export const router = createBrowserRouter([
         path: routes.sandbox,
         lazy: () => import("@/pages/Sandbox/Sandbox"),
       },
+      {
+        path: routes.cards,
+        lazy: () => import("@/pages/Cards/Cards"),
+      },
     ],
   },
 ])

@@ -13,6 +13,11 @@ export const Header = () => {
       <Navigation>
         <LinksList>
           <LinksItem>
+            <PageLink href={routes.cards} view="text">
+              🃏 Cards
+            </PageLink>
+          </LinksItem>
+          <LinksItem>
             <PageLink href={routes.selectors} view="text">
               👆 Selectors
             </PageLink>
